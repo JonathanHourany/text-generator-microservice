@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+service TextGenerator {
+    // Sends the starting string to the model
+    rpc SendTextSeed (Text) returns (Text) {}
+    rpc GenerateText (Text) returns (Text) {}
+}
+
+message Text {
+    string payload = 1;
+}
